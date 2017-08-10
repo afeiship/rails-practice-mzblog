@@ -13,3 +13,14 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-wysihtml5
+ 
+
+  $(document).ready(function(){
+
+    //BUG:initial multi times:
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+
+  })
