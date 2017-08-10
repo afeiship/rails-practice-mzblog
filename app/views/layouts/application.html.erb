@@ -41,6 +41,11 @@
             <%= link_to category.name, posts_path(category: category.id), class:'blog-nav-item' %>
           <% end %>
           <a class="blog-nav-item" href="#">About</a>
+          <% if sign_in? %>
+          <%= link_to  "Sign Out", sign_out_path, class:'blog-nav-item pull-right' %>
+          <% else %>
+          <%= link_to  "Sign In", sign_in_path, class:'blog-nav-item pull-right' %>
+          <% end %>
         </nav>
       </div>
     </div>
